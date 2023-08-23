@@ -1,2 +1,4 @@
 = Pytest-Porringer Documentation
 :navtitle: Pytest-Porringer Documentation
+
+== Purpose
