@@ -19,6 +19,10 @@ class BaseTests(Generic[PluginT], metaclass=ABCMeta):
 
         raise NotImplementedError("Override this fixture")
 
+    @pytest.fixture(name="todo", scope="session")
+    def fixture_todo(self) -> None:
+        """A required testing hook that allows type generation"""
+
 
 class BaseIntegrationTests(Generic[PluginT], metaclass=ABCMeta):
     """Integration testing information for all plugin test classes"""
