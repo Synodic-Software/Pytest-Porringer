@@ -30,7 +30,7 @@ repository = "https://github.com/Synodic-Software/Pytest-Porringer"
 
 # Plugin registration
 [project.entry-points."porringer.environment"]
-mock = "pytest_porringer.mock.scm:MockEnvironment"
+mock = "pytest_porringer.mock.environment:MockEnvironment"
 
 [project.entry-points.pytest11]
 pytest_porringer = "pytest_porringer.plugin"
