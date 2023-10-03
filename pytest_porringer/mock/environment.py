@@ -1,5 +1,7 @@
 """Mock environment data"""
 
+from typing import override
+
 from porringer_core.plugin_schema.environment import (
     Environment,
     InstallParameters,
@@ -7,7 +9,6 @@ from porringer_core.plugin_schema.environment import (
     UpgradeParameters,
 )
 from porringer_core.schema import Package, PackageName
-from typing_extensions import override
 
 
 class MockEnvironment(Environment):
