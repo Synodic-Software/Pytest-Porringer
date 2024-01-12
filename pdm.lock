@@ -5,7 +5,7 @@
 groups = ["default", "lint", "test"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:8d641d57b2c11be8883d31153907c0870107a6ed25f4f2f4de9f9c0cd3e0cebc"
+content_hash = "sha256:6b62977661d2756edc60a033760c20a0bfd6b7ffeda18b0f61904a0013808be4"
 
 [[package]]
 name = "annotated-types"
@@ -369,6 +369,20 @@ dependencies = [
 files = [
     {file = "pytest-mock-3.12.0.tar.gz", hash = "sha256:31a40f038c22cad32287bb43932054451ff5583ff094bca6f675df2f8bc1a6e9"},
     {file = "pytest_mock-3.12.0-py3-none-any.whl", hash = "sha256:0972719a7263072da3a21c7f4773069bcc7486027d7e8e1f81d98a47e701bc4f"},
+]
+
+[[package]]
+name = "pytest-synodic"
+version = "0.1.1.dev4"
+requires_python = ">=3.12"
+summary = "Synodic Pytest utilities"
+dependencies = [
+    "pytest>=7.4.4",
+    "synodic-utilities>=0.1.1.dev5",
+]
+files = [
+    {file = "pytest_synodic-0.1.1.dev4-py3-none-any.whl", hash = "sha256:481671487a4c7cecb9e1d5b0d85b791363d3969dac5467ad477095b747accb8d"},
+    {file = "pytest_synodic-0.1.1.dev4.tar.gz", hash = "sha256:4d425b939ded48f7dbf3902537c2e563ecf71521c1df47295697825ca9ca3cee"},
 ]
 
 [[package]]
