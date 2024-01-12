@@ -13,7 +13,7 @@ from pytest_synodic.plugin import UnitTests as SynodicBaseUnitTests
 from pytest_porringer.variants import environment_variants
 
 
-class BaseTests[PluginT](SynodicBaseTests, metaclass=ABCMeta):
+class BaseTests[PluginT](SynodicBaseTests[PluginT], metaclass=ABCMeta):
     """Shared testing information for all plugin test classes."""
 
     @pytest.fixture(name="plugin_type", scope="session")
@@ -33,11 +33,11 @@ class BaseTests[PluginT](SynodicBaseTests, metaclass=ABCMeta):
         return "porringer"
 
 
-class BaseIntegrationTests[PluginT](SynodicBaseIntegrationTests, metaclass=ABCMeta):
+class BaseIntegrationTests[PluginT](SynodicBaseIntegrationTests[PluginT], metaclass=ABCMeta):
     """Integration testing information for all plugin test classes"""
 
 
-class BaseUnitTests[PluginT](SynodicBaseUnitTests, metaclass=ABCMeta):
+class BaseUnitTests[PluginT](SynodicBaseUnitTests[PluginT], metaclass=ABCMeta):
     """Unit testing information for all plugin test classes"""
 
 
