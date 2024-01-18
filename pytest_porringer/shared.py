@@ -4,8 +4,8 @@ from abc import ABCMeta
 from typing import LiteralString, cast
 
 import pytest
-from porringer_core.plugin_schema.environment import Environment, EnvironmentT
-from porringer_core.schema import PluginT
+from porringer_core.plugin_schema.environment import Environment
+from porringer_core.schema import Distribution, PluginParameters
 from pytest_synodic.plugin import BaseTests as SynodicBaseTests
 from pytest_synodic.plugin import IntegrationTests as SynodicBaseIntegrationTests
 from pytest_synodic.plugin import UnitTests as SynodicBaseUnitTests
@@ -49,18 +49,19 @@ class PluginTests[PluginT](BaseTests[PluginT], metaclass=ABCMeta):
         name="plugin",
         scope="session",
     )
-    def fixture_plugin(
-        plugin_type: type[PluginT],
-    ) -> PluginT:
+    def fixture_plugin(plugin_type: type[PluginT], plugin_parameters: PluginParameters) -> PluginT:
         """Overridden plugin generator for creating a populated data plugin type
 
         Args:
             plugin_type: Plugin type
+            plugin_parameters: Plugin parameters
         Returns:
             A newly constructed provider
         """
 
-        plugin = plugin_type()
+        # TODO: Something
+
+        plugin = plugin_type(plugin_parameters)
 
         return plugin
 
